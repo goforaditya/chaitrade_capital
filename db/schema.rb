@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_19_140935) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_19_150837) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -73,6 +73,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_19_140935) do
     t.text "prerequisites"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_tutorials_on_slug", unique: true
   end
 
   create_table "user_achievements", force: :cascade do |t|
@@ -91,6 +93,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_19_140935) do
     t.integer "progress"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "tutorial_id", null: false
+    t.boolean "completed"
+    t.index ["tutorial_id"], name: "index_user_progresses_on_tutorial_id"
     t.index ["user_id"], name: "index_user_progresses_on_user_id"
   end
 
@@ -116,5 +121,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_19_140935) do
   add_foreign_key "trades", "portfolios"
   add_foreign_key "user_achievements", "achievements"
   add_foreign_key "user_achievements", "users"
+  add_foreign_key "user_progresses", "tutorials"
   add_foreign_key "user_progresses", "users"
 end
