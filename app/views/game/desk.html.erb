@@ -1,0 +1,11 @@
+<div class="max-w-5xl mx-auto p-6">
+  <h2 class="text-3xl font-semibold mb-6">Tutorials</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <% @tutorials.each do |t| %>
+      <%= link_to tutorial_path(t), class: "block bg-white shadow rounded p-6 hover:ring-2 ring-indigo-400" do %>
+        <h3 class="text-xl font-bold mb-2"><%= t.title %></h3>
+        <p class="text-gray-600"><%= truncate(t.content, length: 120) %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
