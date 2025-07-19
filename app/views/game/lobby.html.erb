@@ -1,2 +1,27 @@
-<h1>Game#lobby</h1>
-<p>Find me in app/views/game/lobby.html.erb</p>
+<div data-controller="lobby" class="max-w-7xl mx-auto p-6">
+
+  <!-- News Ticker -->
+  <div data-controller="news-ticker" class="bg-gray-900 text-green-400 p-2 rounded mb-4 overflow-hidden">
+    <ul data-news-ticker-target="list" class="flex animate-scroll whitespace-nowrap">
+      <% @news_items.each do |ni| %>
+        <li class="px-8"><%= link_to ni.headline, ni.url, target: "_blank", class: "hover:underline" %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <!-- Chat Panel -->
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="md:col-span-2">
+      <div id="chat-scroll" class="h-96 bg-white rounded shadow overflow-y-auto flex flex-col-reverse p-4 space-y-2">
+        <%= render @chat_messages %>
+      </div>
+    </div>
+
+    <div>
+      <%= form_with url: chat_messages_path, data: { reflex: "submit->lobby#send" }, html: { id: "chat-form" } do |f| %>
+        <%= f.text_area :content, rows: 3, class: "w-full border rounded p-2" %>
+        <%= f.submit "Send", class: "mt-2 w-full bg-indigo-600 text-white py-2 rounded" %>
+      <% end %>
+    </div>
+  </div>
+</div>
