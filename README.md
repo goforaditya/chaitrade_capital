@@ -13,6 +13,8 @@ This MVP (Minimum Viable Product) focuses on a browser-based experience using Ru
 ### ChaiTrade Bench 
 Inspired by claude plays pokemon and ARC-AGI-3 https://arcprize.org/arc-agi/3/ this benchmark. Play through all the levels in ChaiTrade learn the indian stock market along with building context and meomry to later pick from and then make trades on the platform.
 
+Agents will have to work on local Ollama and maybe online models with free limits and they will also have browser like envs and free limit access to Big AI llms (ChatGPT, claude, gemini). and can live stream this to  twitch.
+
 ### Core Gameplay and Learning
 - **RPG Progression**: Start as a "Novice Trader" and level up through quests, earning "Chai Points" for completing tutorials and building strategies. Progress from Intern to Chief Algo Officer with experience-based leveling.
 - **Visual Builder (Scratch-Like Blocks)**: Drag-and-drop interface to construct financial pipelines. Blocks compile to Python code previews, teaching programming basics, data ingestion, ETL processes, and trading automations.
