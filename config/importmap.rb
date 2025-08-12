@@ -1,5 +1,6 @@
 # Pin npm packages by running ./bin/importmap
-
+# config/importmap.rb
+pin "phaser", to: "https://cdn.jsdelivr.net/npm/phaser@3.85.0/dist/phaser.min.js"
 pin "application"
 pin "@hotwired/turbo-rails", to: "turbo.min.js"
 pin "@hotwired/stimulus", to: "stimulus.min.js"

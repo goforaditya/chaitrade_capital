@@ -12,3 +12,4 @@ Rails.application.routes.draw do
   # Action Cable endpoint
   mount ActionCable.server => "/cable"
 end
+

@@ -30,7 +30,7 @@ This MVP (Minimum Viable Product) focuses on a browser-based experience using Ru
   - Real-Time: Action Cable for chat and updates
   - Other: Devise for authentication, Redis for production WebSockets
 - **Gamification Hooks**: Daily news updates encourage return visits; simulations provide virtual trade results without real trading risks (disclaimers included).
-- **Export and Real-World Tie-In**: Generate Python snippets for external use, focusing on libraries like pandas for analysis.
+- **Export and Real-World Tie-In**: Generate Python snippets for external use, focusing on libraries like pandas for analysis. I.e design your pipelines with visual editor and then export them as working scripts.
 
 ## Installation
 
