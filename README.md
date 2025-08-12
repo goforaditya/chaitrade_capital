@@ -15,6 +15,10 @@ Inspired by claude plays pokemon and ARC-AGI-3 https://arcprize.org/arc-agi/3/ t
 
 Agents will have to work on local Ollama and maybe online models with free limits and they will also have browser like envs and free limit access to Big AI llms (ChatGPT, claude, gemini). and can live stream this to  twitch.
 
+People can then see the performance of these agents and models. Can visual build/prompt to build trading strategies and see their models do trades for them in the wild. All this will be available on the app. 
+
+True gamificaiton of indian stock markets with agentic trading for the masses. Later phase will include API connectivity with stock brokers.
+
 ### Core Gameplay and Learning
 - **RPG Progression**: Start as a "Novice Trader" and level up through quests, earning "Chai Points" for completing tutorials and building strategies. Progress from Intern to Chief Algo Officer with experience-based leveling.
 - **Visual Builder (Scratch-Like Blocks)**: Drag-and-drop interface to construct financial pipelines. Blocks compile to Python code previews, teaching programming basics, data ingestion, ETL processes, and trading automations.
